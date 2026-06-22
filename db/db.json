@@ -5,12 +5,48 @@
       "login": "admin",
       "senha": "123456",
       "nome": "Administrador"
+    }
+  ],
+
+  "lugares": [
+    {
+      "id": 1,
+      "nome": "Sete Lagoas",
+      "categoria": "Ecoturismo",
+      "preco": "Gratuito",
+      "descricao": "Cidade turística de Minas Gerais",
+      "conteudo": "Descrição completa...",
+      "pais": "Brasil",
+      "destaque": true,
+      "imagem_principal": "https://...",
+      "tags": ["Lagoas", "Turismo"],
+      "atracoes": []
     },
     {
       "id": 2,
-      "login": "joao",
-      "senha": "123",
-      "nome": "João Silva"
+      "nome": "Ouro Preto",
+      "categoria": "Histórico",
+      "preco": "Variável",
+      "descricao": "Cidade histórica",
+      "conteudo": "Descrição completa...",
+      "pais": "Brasil",
+      "destaque": true,
+      "imagem_principal": "https://...",
+      "tags": ["Barroco"],
+      "atracoes": []
+    },
+    {
+      "id": 3,
+      "nome": "Capitólio",
+      "categoria": "Ecoturismo",
+      "preco": "Pago",
+      "descricao": "Mar de Minas",
+      "conteudo": "Descrição completa...",
+      "pais": "Brasil",
+      "destaque": true,
+      "imagem_principal": "https://...",
+      "tags": ["Cânions"],
+      "atracoes": []
     }
   ]
 }

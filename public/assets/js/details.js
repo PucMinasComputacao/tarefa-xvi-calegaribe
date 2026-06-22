@@ -1,10 +1,12 @@
+const API_URL =
+    "http://localhost:3000/lugares";
+
 async function fetchItemById(id) {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            const lugar = dadosGlobais.lugares.find(l => l.id === parseInt(id));
-            resolve(lugar);
-        }, 50);
-    });
+
+    const response =
+        await fetch(`${API_URL}/${id}`);
+
+    return await response.json();
 }
 
 function mostrarErro(container, titulo, mensaje) {

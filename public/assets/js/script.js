@@ -1,9 +1,15 @@
+const API_URL =
+    "http://localhost:3000/lugares";
+
 async function fetchItems() {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(dadosGlobais.lugares);
-        }, 50);
-    });
+
+    const response =
+        await fetch(API_URL);
+
+    const dados =
+        await response.json();
+
+    return dados;
 }
 
 function logoutUser() {
@@ -226,3 +232,72 @@ function configurarFavoritos() {
 
 }
 });
+const formulario =
+    document.getElementById("formLugar");
+
+if (formulario) {
+
+    formulario.addEventListener(
+        "submit",
+        cadastrarLugar
+    );
+
+}
+async function cadastrarLugar(event) {
+
+    event.preventDefault();
+
+    const novoLugar = {
+
+    nome:
+        document.getElementById("nome").value,
+
+    categoria:
+        document.getElementById("categoria").value,
+
+    preco:
+        document.getElementById("preco").value,
+
+    descricao:
+        document.getElementById("descricao").value,
+
+    imagem_principal:
+        "https://picsum.photos/800/500",
+
+    destaque: false
+};
+
+    try {
+
+        await fetch(API_URL, {
+
+            method: "POST",
+
+            headers: {
+                "Content-Type":
+                    "application/json"
+            },
+
+            body:
+                JSON.stringify(novoLugar)
+
+        });
+
+        alert(
+            "Lugar cadastrado com sucesso!"
+        );
+
+        formulario.reset();
+
+        location.reload();
+
+    } catch (erro) {
+
+        console.error(erro);
+
+        alert(
+            "Erro ao cadastrar."
+        );
+
+    }
+}
