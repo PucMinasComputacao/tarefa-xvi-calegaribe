@@ -97,6 +97,21 @@ function createCard(lugar) {
                    class="btn btn-outline-dark btn-sm rounded-pill mt-3 w-100 fw-medium">
                     Ver detalhes
                 </a>
+                <button
+                    class="btn btn-warning btn-sm mt-2 w-100"
+                    onclick="editarLugar(${lugar.id})">
+
+                     Editar
+
+                </button>
+
+                <button
+                    class="btn btn-danger btn-sm mt-2 w-100"
+                    onclick="deletarLugar(${lugar.id})">
+
+                    Excluir
+ 
+                </button>
 
             </div>
         </div>
@@ -298,6 +313,79 @@ async function cadastrarLugar(event) {
         alert(
             "Erro ao cadastrar."
         );
+
+    }
+}async function deletarLugar(id) {
+
+    const confirmar =
+        confirm("Deseja excluir este destino?");
+
+    if (!confirmar) return;
+
+    try {
+
+        await fetch(
+            `${API_URL}/${id}`,
+            {
+                method: "DELETE"
+            }
+        );
+
+        alert("Destino excluído!");
+
+        location.reload();
+
+    } catch (erro) {
+
+        console.error(erro);
+
+        alert("Erro ao excluir.");
+
+    }
+}
+async function editarLugar(id) {
+
+    const novoNome =
+        prompt("Digite o novo nome:");
+
+    if (!novoNome) return;
+
+    try {
+
+        const resposta =
+            await fetch(
+                `${API_URL}/${id}`
+            );
+
+        const lugar =
+            await resposta.json();
+
+        lugar.nome = novoNome;
+
+        await fetch(
+            `${API_URL}/${id}`,
+            {
+                method: "PUT",
+
+                headers: {
+                    "Content-Type":
+                        "application/json"
+                },
+
+                body:
+                    JSON.stringify(lugar)
+            }
+        );
+
+        alert("Destino atualizado!");
+
+        location.reload();
+
+    } catch (erro) {
+
+        console.error(erro);
+
+        alert("Erro ao atualizar.");
 
     }
 }
