@@ -16,7 +16,7 @@ function logoutUser() {
     sessionStorage.removeItem("usuarioCorrente");
 
     window.location.href =
-        "./modulos/login/index.html";
+        "assets/modulos/login/index.html";
 }
 
 function getUsuarioLogado() {
@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     } else {
         area.innerHTML = `
-         <a href="./modulos/login/index.html"
+         <a href="assets/modulos/login/index.html"
              class="nav-link">
              Entrar
          </a>
@@ -213,7 +213,7 @@ function configurarFavoritos() {
                    alert("Faça login para favoritar.");
 
                    window.location.href =
-                     "./modulos/login/index.html";
+                     "assets/modulos/login/index.html";
 
                    return;
 }

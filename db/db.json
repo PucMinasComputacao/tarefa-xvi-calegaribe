@@ -18,7 +18,7 @@
       "conteudo": "Descrição completa...",
       "pais": "Brasil",
       "destaque": true,
-      "imagem_principal": "https://...",
+      "imagem_principal": "assets/img/sete_lagoas_principal.jpg",
       "tags": ["Lagoas", "Turismo"],
       "atracoes": []
     },
@@ -31,7 +31,7 @@
       "conteudo": "Descrição completa...",
       "pais": "Brasil",
       "destaque": true,
-      "imagem_principal": "https://...",
+      "imagem_principal": "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=1200&q=80",
       "tags": ["Barroco"],
       "atracoes": []
     },
@@ -44,7 +44,7 @@
       "conteudo": "Descrição completa...",
       "pais": "Brasil",
       "destaque": true,
-      "imagem_principal": "https://...",
+      "imagem_principal": "assets/img/parque_cascata.jpg",
       "tags": ["Cânions"],
       "atracoes": []
     }

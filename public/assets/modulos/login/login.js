@@ -23,7 +23,7 @@ async function loginUser() {
         JSON.stringify(usuario)
     );
 
-    window.location.href = "../../index.html";
+    window.location.href = "../../../index.html";
 }
 
 window.onload = async () => {
