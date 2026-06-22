@@ -1,16 +1,15 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "login": "admin",
       "senha": "123456",
       "nome": "Administrador"
     }
   ],
-
   "lugares": [
     {
-      "id": 1,
+      "id": "1",
       "nome": "Sete Lagoas",
       "categoria": "Ecoturismo",
       "preco": "Gratuito",
@@ -19,11 +18,14 @@
       "pais": "Brasil",
       "destaque": true,
       "imagem_principal": "assets/img/sete_lagoas_principal.jpg",
-      "tags": ["Lagoas", "Turismo"],
+      "tags": [
+        "Lagoas",
+        "Turismo"
+      ],
       "atracoes": []
     },
     {
-      "id": 2,
+      "id": "2",
       "nome": "Ouro Preto",
       "categoria": "Histórico",
       "preco": "Variável",
@@ -32,11 +34,13 @@
       "pais": "Brasil",
       "destaque": true,
       "imagem_principal": "https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=1200&q=80",
-      "tags": ["Barroco"],
+      "tags": [
+        "Barroco"
+      ],
       "atracoes": []
     },
     {
-      "id": 3,
+      "id": "3",
       "nome": "Capitólio",
       "categoria": "Ecoturismo",
       "preco": "Pago",
@@ -45,8 +49,20 @@
       "pais": "Brasil",
       "destaque": true,
       "imagem_principal": "assets/img/parque_cascata.jpg",
-      "tags": ["Cânions"],
+      "tags": [
+        "Cânions"
+      ],
       "atracoes": []
+    },
+    {
+      "nome": "pirapora",
+      "categoria": "ecoturismo",
+      "preco": "variavel",
+      "descricao": "a",
+      "imagem_principal": "https://picsum.photos/800/500",
+      "destaque": false,
+      "id": "H-WDfWePyus"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

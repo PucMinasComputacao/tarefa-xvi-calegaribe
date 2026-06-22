@@ -69,14 +69,15 @@ function createCard(lugar) {
                     </small>
 
                     <button
-                        class="btn btn-sm favorito-btn"
-                        data-id="${lugar.id}"
-                    >
-                        <i class="${
-                            favoritado
-                            ? 'fa-solid'
-                            : 'fa-regular'
-                        } fa-heart text-danger"></i>
+                        class="btn btn-warning btn-sm mt-2 w-100"
+                        onclick="editarLugar('${lugar.id}')">
+                         Editar
+                    </button>
+
+                    <button
+                        class="btn btn-danger btn-sm mt-2 w-100"
+                        onclick="deletarLugar('${lugar.id}')">
+                         Excluir
                     </button>
 
                 </div>
@@ -263,23 +264,16 @@ async function cadastrarLugar(event) {
     event.preventDefault();
 
     const novoLugar = {
-
-    nome:
-        document.getElementById("nome").value,
-
-    categoria:
-        document.getElementById("categoria").value,
-
-    preco:
-        document.getElementById("preco").value,
-
-    descricao:
-        document.getElementById("descricao").value,
-
-    imagem_principal:
-        "https://picsum.photos/800/500",
-
-    destaque: false
+    nome: document.getElementById("nome").value,
+    categoria: document.getElementById("categoria").value,
+    preco: document.getElementById("preco").value,
+    descricao: document.getElementById("descricao").value,
+    conteudo: document.getElementById("descricao").value,
+    pais: "Brasil",
+    destaque: false,
+    imagem_principal: "https://picsum.photos/800/500",
+    tags: [],
+    atracoes: []
 };
 
     try {

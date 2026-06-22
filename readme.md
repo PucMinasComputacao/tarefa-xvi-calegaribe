@@ -70,43 +70,36 @@ Arquivo: `db/db.json`
 
 ## Página Inicial
 
-![Página Inicial](prints/home.png)
+![Página Inicial](print/image.png)
 
----
 
 ## Página de Detalhes
 
-![Página de Detalhes](prints/detalhes.png)
+![Página de Detalhes](print/image2.png)
 
----
 
 ## Testes da API
 
 ### GET
 
-![GET](prints/get.png)
+![GET](print/imagem2.png)
 
-### POST
+### POST 
 
-![POST](prints/post.png)
+![POST]![alt text](print/image3.png)
 
-### PUT
+### PUT 
 
-![PUT](prints/put.png)
+![PUT]![alt text](print/image4.png)
 
 ### DELETE
 
-![DELETE](prints/delete.png)
 
----
+![DELETE](print/imagem5.png)
+
 
 ## Requisições Fetch (Network)
 
-### GET e POST
-
-![Network](prints/network.png)
-
----
 
 ## Como Executar
 
